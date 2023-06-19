@@ -22,8 +22,11 @@ pip install -e .
 - `docker build . -t lightning:latest`
 - `docker run --name lightning_container lightning:latest copper_train data.num_workers=16 `\
 - `docker start lightning_container`
-- `docker exec lightning_container copper_eval data.num_workers=16 `
+- `docker exec lightning_container copper_eval`
+- `docker stop lightning_container`
+- `docker rm lightning_container`
 
-### Team
+## Team
+
 - `Anurag Mittal`
 - `Aman Jaipuria`

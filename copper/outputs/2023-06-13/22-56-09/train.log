@@ -1,0 +1,39 @@
+[2023-06-13 22:56:09,578][__main__][INFO] - Instantiating datamodule <copper.data.cifar_datamodule.CIFARDataModule>
+[2023-06-13 22:56:09,588][copper.utils.utils][ERROR] - 
+Traceback (most recent call last):
+  File "C:\Users\0152013\AppData\Local\miniforge3\envs\yolov5\lib\site-packages\hydra\_internal\utils.py", line 650, in _locate
+    obj = import_module(mod)
+  File "C:\Users\0152013\AppData\Local\miniforge3\envs\yolov5\lib\importlib\__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 981, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'copper.data.cifar_datamodule.CIFARDataModule'; 'copper.data.cifar_datamodule' is not a package
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\0152013\AppData\Local\miniforge3\envs\yolov5\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 134, in _resolve_target
+    target = _locate(target)
+  File "C:\Users\0152013\AppData\Local\miniforge3\envs\yolov5\lib\site-packages\hydra\_internal\utils.py", line 653, in _locate
+    raise ImportError(
+ImportError: Error loading 'copper.data.cifar_datamodule.CIFARDataModule':
+ModuleNotFoundError("No module named 'copper.data.cifar_datamodule.CIFARDataModule'; 'copper.data.cifar_datamodule' is not a package")
+Are you sure that 'CIFARDataModule' is importable from module 'copper.data.cifar_datamodule'?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\0152013\desktop\emlo\session_4\assignment\lightning-template\copper\utils\utils.py", line 65, in wrap
+    metric_dict, object_dict = task_func(cfg=cfg)
+  File "C:\Users\0152013\Desktop\EMLO\Session_4\Assignment\lightning-template\copper\train.py", line 20, in train
+    datamodule: LightningDataModule = hydra.utils.instantiate(cfg.data)
+  File "C:\Users\0152013\AppData\Local\miniforge3\envs\yolov5\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 226, in instantiate
+    return instantiate_node(
+  File "C:\Users\0152013\AppData\Local\miniforge3\envs\yolov5\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 333, in instantiate_node
+    _target_ = _resolve_target(node.get(_Keys.TARGET), full_key)
+  File "C:\Users\0152013\AppData\Local\miniforge3\envs\yolov5\lib\site-packages\hydra\_internal\instantiate\_instantiate2.py", line 139, in _resolve_target
+    raise InstantiationException(msg) from e
+hydra.errors.InstantiationException: Error locating target 'copper.data.cifar_datamodule.CIFARDataModule', set env var HYDRA_FULL_ERROR=1 to see chained exception.
+full_key: data
+[2023-06-13 22:56:09,594][copper.utils.utils][INFO] - Output dir: C:\Users\0152013\Desktop\EMLO\Session_4\Assignment\lightning-template\copper\outputs\2023-06-13\22-56-09
